@@ -1,0 +1,63 @@
+%% ====================================================================%%
+%%  Developed by Marcos O. Prates, March 2011.
+%%
+%%	Sample Driver file for use with uconnthesis.sty
+%% 	To print this document in the Math Dept,
+%%	do the following:
+%%  	latex main
+%%		bibtex main
+%%		latex main (you may have to do this twice at this point)
+%%		dvipr main
+%%	To run this sample, you will also need the following files
+%%		abs.tex, ack.tex,
+%%		chap1.tex, chap2.tex, appendix.tex	
+%%		thesis.bib	
+%% ====================================================================%%
+%%
+\documentclass[11pt]{report}
+
+%% Include nescessary packages for compilation (THE uconnthesis.sty must be always last)
+%% Feel free to add all nescessary package for latex files
+%% NOTE: the uconnthesisthesis style file should go AFTER all the other packages
+%% You may have conflicts if you call the amsthm.sty package after uconnthesis.sty
+\usepackage{amsbsy, amsmath, amssymb, setspace}
+\usepackage{natbib}
+\usepackage{amscd} % commutative diagrams made easy -  has to be loaded after amsmath
+\usepackage{amsthm}  % theorem, lemma, definition, ... -  has to be loaded after amsmath
+\usepackage{graphicx} % Imports figures : pdf, jpg, png, tif (one f)
+                      % Use the package graphics if you use eps files.
+                      % Warning : It is very difficult to use both graphics and graphicx.
+\usepackage{rotating}
+\usepackage{uconnthesis} % always put it last
+
+
+
+\begin{document}
+%% Comment out items by inserting a percent % character
+%%Set Thesis main title
+\title{Time-dependent Effects of SNP on the Alzheimer's Disease Longitudinal Measurements}
+
+%%set author
+\name{Hao Wu}
+
+
+
+%% You may want to change the next definitions if you are getting
+%% a different degree or writing a thesis instead of a dissertation
+
+%% Starts page numbering as i, ii, etc.
+%% Generate the first page and include abstract (from abs.tex)
+\firstpage
+\input abs
+
+
+
+%%Generate the list of figures and table (comment if not nescessary)
+\figurespagetrue
+\tablespagetrue
+
+
+
+
+
+\end{document}
